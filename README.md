@@ -1,6 +1,8 @@
+# THREE.IsosurfaceGeometry
+
 three.js wrapper for http://mikolalysenko.github.com/Isosurface/
 
-# Usage
+## Usage
 
 ```html
 <script src="http://tdhooper.github.io/isosurface/build/isosurface.js"></script>
