@@ -6,7 +6,7 @@ three.js wrapper for http://mikolalysenko.github.com/Isosurface/
 
 ```html
 <script src="http://tdhooper.github.io/isosurface/build/isosurface.js"></script>
-<script src="http://tdhooper.github.io/three-isosurface/IsosurfaceGeometry.js"></script>
+<script src="http://tdhooper.github.io/threejs-isosurface/IsosurfaceGeometry.js"></script>
 ```
 
 ```javascript
