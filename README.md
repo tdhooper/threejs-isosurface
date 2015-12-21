@@ -11,11 +11,13 @@ three.js wrapper for https://github.com/mikolalysenko/isosurface
 
 ```javascript
 
-var dims = [64,64,64];
+var d = 64;
+var dims = [d, d, d];
+var b = 1.5;
+var bounds = [[-b, -b, -b ], [b, b, b]];
 var map = function(p) {
-  return p.length() - 100;
+  return p.length() - 1;
 };
-var bounds = [[-11,-11,-11], [11,11,11]];
 var geom = new THREE.IsosurfaceGeometry(dims, map, bounds);
 var obj = new THREE.Mesh(geom, material);
 scene.add(obj);
