@@ -42,8 +42,8 @@ THREE.IsosurfaceGeometry = function(dims, map, bounds) {
     var vertexNormals = [];
     var normal;
 
-    for (var i = 0; i < geometry.vertices.length; ++i) {
-        vertex = geometry.vertices[i];
+    for (var i = 0; i < this.vertices.length; ++i) {
+        vertex = this.vertices[i];
 
         upTinyChangeInX   = map( vertex.clone().add(tinyChangeX) );
         downTinyChangeInX = map( vertex.clone().sub(tinyChangeX) );
@@ -62,8 +62,8 @@ THREE.IsosurfaceGeometry = function(dims, map, bounds) {
         vertexNormals.push(normal);
     }
 
-    for (var i = 0; i < geometry.faces.length; ++i) {
-        f = geometry.faces[i];
+    for (var i = 0; i < this.faces.length; ++i) {
+        f = this.faces[i];
         f.vertexNormals = [
             vertexNormals[f.a],
             vertexNormals[f.b],
