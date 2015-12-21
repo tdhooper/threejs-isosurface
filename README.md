@@ -1,6 +1,6 @@
 # THREE.IsosurfaceGeometry
 
-three.js wrapper for http://mikolalysenko.github.com/Isosurface/
+three.js wrapper for https://github.com/mikolalysenko/isosurface
 
 ## Usage
 
