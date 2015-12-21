@@ -3,7 +3,13 @@ THREE.IsosurfaceGeometry = function(dims, map, bounds) {
 
     THREE.Geometry.call( this );
 
-    var result = isosurface.marchingCubes(dims, map, bounds)
+    var p = new THREE.Vector3();
+
+    var compatibleMap = function(x, y, z) {
+        return map(p.fromArray([x, y, z]))
+    };
+
+    var result = isosurface.marchingCubes(dims, compatibleMap, bounds)
 
     var v, f;
 
@@ -39,16 +45,16 @@ THREE.IsosurfaceGeometry = function(dims, map, bounds) {
     for (var i = 0; i < geometry.vertices.length; ++i) {
         vertex = geometry.vertices[i];
 
-        upTinyChangeInX   = modelVector( vertex.clone().add(tinyChangeX) ); 
-        downTinyChangeInX = modelVector( vertex.clone().sub(tinyChangeX) ); 
+        upTinyChangeInX   = map( vertex.clone().add(tinyChangeX) );
+        downTinyChangeInX = map( vertex.clone().sub(tinyChangeX) );
         tinyChangeInX = upTinyChangeInX - downTinyChangeInX;
 
-        upTinyChangeInY   = modelVector( vertex.clone().add(tinyChangeY) ); 
-        downTinyChangeInY = modelVector( vertex.clone().sub(tinyChangeY) ); 
+        upTinyChangeInY   = map( vertex.clone().add(tinyChangeY) );
+        downTinyChangeInY = map( vertex.clone().sub(tinyChangeY) );
         tinyChangeInY = upTinyChangeInY - downTinyChangeInY;
 
-        upTinyChangeInZ   = modelVector( vertex.clone().add(tinyChangeZ) ); 
-        downTinyChangeInZ = modelVector( vertex.clone().sub(tinyChangeZ) ); 
+        upTinyChangeInZ   = map( vertex.clone().add(tinyChangeZ) );
+        downTinyChangeInZ = map( vertex.clone().sub(tinyChangeZ) );
         tinyChangeInZ = upTinyChangeInZ - downTinyChangeInZ;
         
         normal = new THREE.Vector3(tinyChangeInX, tinyChangeInY, tinyChangeInZ);
