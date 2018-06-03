@@ -1,0 +1,14 @@
+{
+  "name": "threejs-isosurface",
+  "version": "1.0.0",
+  "description": "three.js wrapper for https://github.com/mikolalysenko/isosurface",
+  "homepage": "https://github.com/tdhooper/threejs-isosurface",
+  "bugs": "https://github.com/tdhooper/threejs-isosurface/issues",
+  "repository": "https://github.com/tdhooper/threejs-isosurface",
+  "main": "IsosurfaceGeometry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Hooper",
+  "license": "MIT"
+}
