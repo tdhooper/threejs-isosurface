@@ -2,6 +2,10 @@
 
 three.js wrapper for https://github.com/mikolalysenko/isosurface
 
+## Example
+
+https://codepen.io/tdhooper/pen/QyEgYO
+
 ## Usage
 
 ```html
